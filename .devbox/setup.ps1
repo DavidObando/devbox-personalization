@@ -4,6 +4,11 @@
 winget install JanDeDobbeleer.OhMyPosh -s winget
 # install required fonts
 C:\Users\daobando\AppData\Local\Programs\oh-my-posh\bin\oh-my-posh.exe font install Meslo
+# update default font in the terminal settings file to be MesloLGM NF
+$terminalSettingsFile = "C:\Users\daobando\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+$terminalSettings = Get-Content $terminalSettingsFile | ConvertFrom-Json -Depth 100
+$terminalSettings.profiles.defaults.font.face = "MesloLGM NF"
+$terminalSettings | ConvertTo-Json -Depth 100 | Set-Content $terminalSettingsFile
 
 # change mouse cursor
 # copy directory .\Cursors to C:\Users\daobando\AppData\Local\Microsoft\Windows
@@ -13,11 +18,6 @@ Copy-Item -Path $source -Destination $destination -Recurse -Force
 # apply registry settings from file Cursor.reg
 $filePath = ".\Cursor.reg"
 reg import $filePath
-
-# set windows terminal settings
-$filePath = ".\terminalsettings.json"
-$destination = "C:\Users\daobando\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
-Copy-Item -Path $filePath -Destination $destination -Force
 
 # Enable long file paths
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1
