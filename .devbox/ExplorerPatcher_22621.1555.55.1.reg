@@ -5,7 +5,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 "OldTaskbar"=dword:00000001
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
-;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_TaskbarPosition"=dword:00000000
+;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_TaskbarPosition"=dword:00000003
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_MMTaskbarPosition"=dword:00000003
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
@@ -54,7 +54,7 @@ Windows Registry Editor Version 5.00
 "IMEStyle"=dword:00000000
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 ;"Virtualized_{D17F1E1A-5919-4427-8F89-A1A8503CA3EB}_RegisterAsShellExtension"=dword:00000000
-[-HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
 @=""
 [HKEY_CURRENT_USER\Software\ExplorerPatcher]
 "LegacyFileTransferDialog"=dword:00000000

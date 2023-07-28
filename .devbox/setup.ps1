@@ -42,3 +42,7 @@ Start-Process -FilePath explorer.exe
 
 # Enable long file paths
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1
+
+# add vscode to the explorer context menu by running vscode.reg
+$filePath = ".\vscode.reg"
+reg import $filePath
