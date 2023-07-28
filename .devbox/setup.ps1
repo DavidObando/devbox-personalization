@@ -39,3 +39,6 @@ Stop-Process -Name explorer
 Start-Sleep -Seconds 15
 # start explorer
 Start-Process -FilePath explorer.exe
+
+# Enable long file paths
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1
